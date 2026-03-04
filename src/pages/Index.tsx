@@ -160,7 +160,7 @@ export default function Index() {
                 <Icon name="Calendar" size={18} style={{ color: "#5c6c53" }} />
               </div>
               <span className="font-golos text-sm" style={{ color: "#4a4540" }}>
-                Старт <strong>31 мая</strong> — 4 занятия по субботам
+                Старт <strong>31 мая</strong> — 4 занятия по воскресеньям
               </span>
             </div>
           </div>
@@ -307,7 +307,7 @@ export default function Index() {
             <div className="text-center mb-16">
               <span className="font-golos text-sm tracking-widest uppercase" style={{ color: "#6b7343" }}>Расписание</span>
               <h2 className="font-cormorant font-light mt-3" style={{ fontSize: "clamp(2.2rem, 4vw, 3.5rem)", color: "#2e2b27" }}>Программа курса</h2>
-              <p className="font-golos text-sm mt-2" style={{ color: "#6b6058" }}>4 занятия · каждую субботу · июнь 2025</p>
+              <p className="font-golos text-sm mt-2" style={{ color: "#6b6058" }}>4 занятия · каждое воскресенье · июнь 2025</p>
             </div>
           </AnimatedSection>
 
