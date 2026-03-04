@@ -222,6 +222,84 @@ export default function Index() {
         </div>
       </section>
 
+      {/* FOR WHOM */}
+      <section className="py-24 px-6" style={{ backgroundColor: "#fefefe" }}>
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <span className="font-golos text-sm tracking-widest uppercase" style={{ color: "#6b7343" }}>Аудитория</span>
+              <h2 className="font-cormorant font-light mt-3" style={{ fontSize: "clamp(2.2rem, 4vw, 3.5rem)", color: "#2e2b27" }}>
+                Для кого этот курс
+              </h2>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { icon: "Brain", title: "Психологи и психотерапевты", text: "Специалисты, работающие в индивидуальном и групповом консультировании, желающие расширить инструментарий телесно-ориентированными методами." },
+              { icon: "Heart", title: "Клинические психологи", text: "Специалисты в области психокоррекции, стремящиеся углубить работу с темой психологической зрелости и опорности клиента." },
+              { icon: "Baby", title: "Перинатальные психологи", text: "Специалисты, сопровождающие клиентов в период материнства и раннего детства — темы, тесно связанные с этапами формирования опорности." },
+              { icon: "GraduationCap", title: "Студенты психологических специальностей", text: "Обучающиеся на последних курсах и в магистратуре, желающие освоить практические методы ТОП." },
+              { icon: "Users", title: "Ведущие групп", text: "Специалисты, проводящие терапевтические и психологические группы и желающие включить телесные практики в свою работу." },
+              { icon: "Sprout", title: "Все, кто работает с личностным ростом", text: "Коучи, тренеры и консультанты, сопровождающие клиентов в процессах развития и трансформации." },
+            ].map((card, i) => (
+              <AnimatedSection key={i}>
+                <div className="p-7 rounded-3xl h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1" style={{ backgroundColor: "#f5f1ec" }}>
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: "#d5cfc7" }}>
+                    <Icon name={card.icon} size={18} style={{ color: "#5c6c53" }} />
+                  </div>
+                  <h3 className="font-cormorant text-xl font-medium mb-2" style={{ color: "#2e2b27" }}>{card.title}</h3>
+                  <p className="font-golos text-sm leading-relaxed" style={{ color: "#6b6058" }}>{card.text}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DOCUMENTS */}
+      <section className="py-16 px-6" style={{ backgroundColor: "#f5f1ec" }}>
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection>
+            <div className="rounded-3xl overflow-hidden md:grid md:grid-cols-2" style={{ backgroundColor: "#2e2b27" }}>
+              {/* Certificate */}
+              <div className="p-10 md:p-12 flex flex-col justify-center border-b md:border-b-0 md:border-r" style={{ borderColor: "rgba(213,207,199,0.15)" }}>
+                <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6" style={{ backgroundColor: "rgba(213,207,199,0.15)" }}>
+                  <Icon name="Award" size={24} style={{ color: "#d5cfc7" }} />
+                </div>
+                <h3 className="font-cormorant text-2xl font-medium mb-3" style={{ color: "#fefefe" }}>
+                  Удостоверение о повышении квалификации
+                </h3>
+                <p className="font-golos text-sm leading-relaxed mb-4" style={{ color: "#b8b0a6" }}>
+                  По окончании курса выдаётся удостоверение установленного образца. Данные вносятся в Федеральный реестр документов об образовании (ФРДО).
+                </p>
+                <div className="flex items-center gap-2 mt-2">
+                  <Icon name="CheckCircle" size={15} style={{ color: "#6b7343" }} />
+                  <span className="font-golos text-xs" style={{ color: "#6b7343" }}>Данные вносятся в ФРДО</span>
+                </div>
+              </div>
+              {/* License */}
+              <div className="p-10 md:p-12 flex flex-col justify-center">
+                <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6" style={{ backgroundColor: "rgba(213,207,199,0.15)" }}>
+                  <Icon name="ShieldCheck" size={24} style={{ color: "#d5cfc7" }} />
+                </div>
+                <h3 className="font-cormorant text-2xl font-medium mb-3" style={{ color: "#fefefe" }}>
+                  Лицензированный образовательный центр
+                </h3>
+                <p className="font-golos text-sm leading-relaxed mb-5" style={{ color: "#b8b0a6" }}>
+                  Центр имеет лицензию на ведение образовательной деятельности, выданную Департаментом образования и науки г. Москвы.
+                </p>
+                <div className="rounded-2xl px-4 py-3" style={{ backgroundColor: "rgba(213,207,199,0.08)" }}>
+                  <p className="font-golos text-xs mb-1" style={{ color: "#6b7343" }}>Лицензия</p>
+                  <p className="font-golos text-xs font-medium" style={{ color: "#d5cfc7" }}>№ Л035-01298-77/00181037</p>
+                  <p className="font-golos text-xs mt-1" style={{ color: "#6b6058" }}>Выдана 24.11.2020 г.</p>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* PROGRAM */}
       <section id="program" className="py-24 px-6" style={{ backgroundColor: "#fefefe" }}>
         <div className="max-w-6xl mx-auto">
