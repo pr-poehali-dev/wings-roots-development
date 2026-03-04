@@ -288,12 +288,9 @@ export default function Index() {
                     </li>
                   ))}
                 </ul>
-                <div className="rounded-2xl px-4 py-3 mb-6" style={{ backgroundColor: "rgba(213,207,199,0.15)" }}>
-                  <p className="font-golos text-xs mb-2" style={{ color: "#d5cfc7" }}>Оплата частями:</p>
-                  <div className="flex gap-2">
-                    <span className="px-3 py-1 rounded-full font-golos text-xs" style={{ backgroundColor: "rgba(254,254,254,0.15)", color: "#fefefe" }}>2 части · по 19 500 ₽</span>
-                    <span className="px-3 py-1 rounded-full font-golos text-xs" style={{ backgroundColor: "rgba(254,254,254,0.15)", color: "#fefefe" }}>4 части · по 9 750 ₽</span>
-                  </div>
+                <div className="flex items-center gap-2 mb-6">
+                  <Icon name="CreditCard" size={14} style={{ color: "#d5cfc7" }} />
+                  <span className="font-golos text-xs" style={{ color: "#d5cfc7" }}>Доступна оплата частями</span>
                 </div>
                 <div className="mb-6">
                   <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#fefefe" }}>39 000 ₽</span>
@@ -318,12 +315,9 @@ export default function Index() {
                     </li>
                   ))}
                 </ul>
-                <div className="rounded-2xl px-4 py-3 mb-6" style={{ backgroundColor: "#f5f1ec" }}>
-                  <p className="font-golos text-xs mb-2" style={{ color: "#6b6058" }}>Оплата частями:</p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 rounded-full font-golos text-xs" style={{ backgroundColor: "#d5cfc7", color: "#2e2b27" }}>2 части · по 14 500 ₽</span>
-                    <span className="px-3 py-1 rounded-full font-golos text-xs" style={{ backgroundColor: "#d5cfc7", color: "#2e2b27" }}>4 части · по 7 250 ₽</span>
-                  </div>
+                <div className="flex items-center gap-2 mb-6">
+                  <Icon name="CreditCard" size={14} style={{ color: "#6b7343" }} />
+                  <span className="font-golos text-xs" style={{ color: "#6b6058" }}>Доступна оплата частями</span>
                 </div>
                 <div className="mb-6">
                   <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#2e2b27" }}>29 000 ₽</span>
