@@ -373,11 +373,12 @@ export default function Index() {
 
           <AnimatedSection>
             <div className="rounded-3xl overflow-hidden md:grid md:grid-cols-2" style={{ backgroundColor: "#f5f1ec" }}>
-              <div className="relative overflow-hidden" style={{ minHeight: "420px" }}>
+              <div className="flex items-end justify-center" style={{ backgroundColor: "#ede8e2" }}>
                 <img
                   src="https://cdn.poehali.dev/projects/3fb389fd-635e-4af7-8ba6-692e017c1dda/bucket/bd44cf9b-f836-4dcd-95ab-877d115e8ab9.jpg"
                   alt="Пекарская Светлана"
-                  className="w-full h-full object-cover object-top absolute inset-0"
+                  className="w-full object-contain object-bottom"
+                  style={{ maxHeight: "560px", display: "block" }}
                 />
               </div>
               <div className="p-10 md:p-14 flex flex-col justify-center">
