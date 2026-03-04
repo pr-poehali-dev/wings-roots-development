@@ -353,23 +353,25 @@ export default function Index() {
 
           <AnimatedSection>
             <div className="rounded-3xl overflow-hidden md:grid md:grid-cols-2" style={{ backgroundColor: "#f5f1ec" }}>
-              <div className="relative h-64 md:h-auto flex items-center justify-center" style={{ backgroundColor: "#d5cfc7", minHeight: "320px" }}>
-                <div className="w-32 h-32 rounded-full flex items-center justify-center" style={{ backgroundColor: "#b8b0a6" }}>
-                  <Icon name="User" size={52} style={{ color: "#fefefe" }} />
-                </div>
+              <div className="relative overflow-hidden" style={{ minHeight: "420px" }}>
+                <img
+                  src="https://cdn.poehali.dev/projects/3fb389fd-635e-4af7-8ba6-692e017c1dda/bucket/bd44cf9b-f836-4dcd-95ab-877d115e8ab9.jpg"
+                  alt="Пекарская Светлана"
+                  className="w-full h-full object-cover object-top absolute inset-0"
+                />
               </div>
               <div className="p-10 md:p-14 flex flex-col justify-center">
-                <h3 className="font-cormorant text-3xl font-medium mb-2" style={{ color: "#2e2b27" }}>Имя Преподавателя</h3>
-                <p className="font-golos text-sm mb-6" style={{ color: "#6b7343" }}>Специалист по телесно-ориентированной психотерапии</p>
+                <h3 className="font-cormorant text-3xl font-medium mb-1" style={{ color: "#2e2b27" }}>Пекарская Светлана</h3>
+                <p className="font-golos text-sm font-medium mb-6" style={{ color: "#6b7343" }}>К.п.н., клинический и перинатальный психолог</p>
                 <p className="font-golos text-sm leading-relaxed mb-8" style={{ color: "#4a4540" }}>
-                  Психолог, специалист в области телесно-ориентированной психотерапии. Многолетний опыт работы с темой психологической зрелости, формирования опорности и личностного роста.
+                  Преподаватель ВШЭ и МИП, сертифицированный супервизор РПА, руководитель команды психологов PsyTeam. Специализируется на развитии психологической зрелости и работе с темой опорности через методы телесно-ориентированной психотерапии.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { icon: "GraduationCap", text: "Профессиональное образование" },
-                    { icon: "Clock", text: "Многолетний опыт" },
-                    { icon: "BookOpen", text: "Авторская методология" },
-                    { icon: "Users", text: "Работа с группами" },
+                    { icon: "GraduationCap", text: "К.п.н., ВШЭ и МИП" },
+                    { icon: "Shield", text: "Супервизор РПА" },
+                    { icon: "Heart", text: "Перинатальный психолог" },
+                    { icon: "Users", text: "Руководитель PsyTeam" },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-2">
                       <Icon name={item.icon} size={16} style={{ color: "#6b7343" }} />
