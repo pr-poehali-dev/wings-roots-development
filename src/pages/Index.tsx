@@ -350,6 +350,33 @@ export default function Index() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             <AnimatedSection>
+              <div className="relative rounded-3xl p-8 flex flex-col h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2" style={{ backgroundColor: "#fefefe", borderColor: "#d5cfc7" }}>
+                <div className="mb-6">
+                  <h3 className="font-cormorant text-2xl font-medium mb-1" style={{ color: "#2e2b27" }}>Без малой группы</h3>
+                  <p className="font-golos text-sm" style={{ color: "#6b6058" }}>Базовая программа</p>
+                </div>
+                <ul className="space-y-3 mb-6 flex-1">
+                  {["32 часа курса с практиками", "Все лекционные материалы", "Доступ к записям занятий"].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 font-golos text-sm" style={{ color: "#4a4540" }}>
+                      <Icon name="Check" size={16} style={{ color: "#6b7343" }} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex items-center gap-2 mb-6">
+                  <Icon name="CreditCard" size={14} style={{ color: "#6b7343" }} />
+                  <span className="font-golos text-xs" style={{ color: "#6b6058" }}>Доступна оплата частями</span>
+                </div>
+                <div className="mb-6">
+                  <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#2e2b27" }}>29 000 ₽</span>
+                </div>
+                <button className="w-full py-3.5 rounded-full font-golos font-medium text-sm border-2 transition-all duration-300 hover:scale-105" style={{ borderColor: "#6b7343", color: "#6b7343", backgroundColor: "transparent" }}>
+                  Выбрать тариф
+                </button>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection className="delay-100">
               <div className="relative rounded-3xl p-8 flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1" style={{ backgroundColor: "#5c6c53" }}>
                 <div className="absolute top-5 right-5 px-3 py-1 rounded-full text-xs font-golos font-medium" style={{ backgroundColor: "#6b7343", color: "#fefefe" }}>
                   Рекомендуем
@@ -374,33 +401,6 @@ export default function Index() {
                   <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#fefefe" }}>39 000 ₽</span>
                 </div>
                 <button className="w-full py-3.5 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ backgroundColor: "#fefefe", color: "#5c6c53" }}>
-                  Записаться на курс
-                </button>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection className="delay-100">
-              <div className="relative rounded-3xl p-8 flex flex-col h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2" style={{ backgroundColor: "#fefefe", borderColor: "#d5cfc7" }}>
-                <div className="mb-6">
-                  <h3 className="font-cormorant text-2xl font-medium mb-1" style={{ color: "#2e2b27" }}>Без малой группы</h3>
-                  <p className="font-golos text-sm" style={{ color: "#6b6058" }}>Базовая программа</p>
-                </div>
-                <ul className="space-y-3 mb-6 flex-1">
-                  {["32 часа курса с практиками", "Все лекционные материалы", "Доступ к записям занятий"].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 font-golos text-sm" style={{ color: "#4a4540" }}>
-                      <Icon name="Check" size={16} style={{ color: "#6b7343" }} />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex items-center gap-2 mb-6">
-                  <Icon name="CreditCard" size={14} style={{ color: "#6b7343" }} />
-                  <span className="font-golos text-xs" style={{ color: "#6b6058" }}>Доступна оплата частями</span>
-                </div>
-                <div className="mb-6">
-                  <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#2e2b27" }}>29 000 ₽</span>
-                </div>
-                <button className="w-full py-3.5 rounded-full font-golos font-medium text-sm border-2 transition-all duration-300 hover:scale-105" style={{ borderColor: "#6b7343", color: "#6b7343", backgroundColor: "transparent" }}>
                   Выбрать тариф
                 </button>
               </div>
