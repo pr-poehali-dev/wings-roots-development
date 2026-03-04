@@ -280,7 +280,7 @@ export default function Index() {
                   <h3 className="font-cormorant text-2xl font-medium mb-1" style={{ color: "#fefefe" }}>Полный курс</h3>
                   <p className="font-golos text-sm" style={{ color: "#d5cfc7", opacity: 0.85 }}>Максимальный результат</p>
                 </div>
-                <ul className="space-y-3 mb-8 flex-1">
+                <ul className="space-y-3 mb-6 flex-1">
                   {["32 часа курса с практиками", "16 часов малых групп", "Отработка упражнений", "Полный доступ к материалам"].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 font-golos text-sm" style={{ color: "#fefefe" }}>
                       <Icon name="Check" size={16} style={{ color: "#d5cfc7" }} />
@@ -288,6 +288,13 @@ export default function Index() {
                     </li>
                   ))}
                 </ul>
+                <div className="rounded-2xl px-4 py-3 mb-6" style={{ backgroundColor: "rgba(213,207,199,0.15)" }}>
+                  <p className="font-golos text-xs mb-2" style={{ color: "#d5cfc7" }}>Оплата частями:</p>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 rounded-full font-golos text-xs" style={{ backgroundColor: "rgba(254,254,254,0.15)", color: "#fefefe" }}>2 части · по 19 500 ₽</span>
+                    <span className="px-3 py-1 rounded-full font-golos text-xs" style={{ backgroundColor: "rgba(254,254,254,0.15)", color: "#fefefe" }}>4 части · по 9 750 ₽</span>
+                  </div>
+                </div>
                 <div className="mb-6">
                   <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#fefefe" }}>39 000 ₽</span>
                 </div>
@@ -303,7 +310,7 @@ export default function Index() {
                   <h3 className="font-cormorant text-2xl font-medium mb-1" style={{ color: "#2e2b27" }}>Без малой группы</h3>
                   <p className="font-golos text-sm" style={{ color: "#6b6058" }}>Базовая программа</p>
                 </div>
-                <ul className="space-y-3 mb-8 flex-1">
+                <ul className="space-y-3 mb-6 flex-1">
                   {["32 часа курса с практиками", "Все лекционные материалы", "Доступ к записям занятий"].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 font-golos text-sm" style={{ color: "#4a4540" }}>
                       <Icon name="Check" size={16} style={{ color: "#6b7343" }} />
@@ -311,6 +318,13 @@ export default function Index() {
                     </li>
                   ))}
                 </ul>
+                <div className="rounded-2xl px-4 py-3 mb-6" style={{ backgroundColor: "#f5f1ec" }}>
+                  <p className="font-golos text-xs mb-2" style={{ color: "#6b6058" }}>Оплата частями:</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 rounded-full font-golos text-xs" style={{ backgroundColor: "#d5cfc7", color: "#2e2b27" }}>2 части · по 14 500 ₽</span>
+                    <span className="px-3 py-1 rounded-full font-golos text-xs" style={{ backgroundColor: "#d5cfc7", color: "#2e2b27" }}>4 части · по 7 250 ₽</span>
+                  </div>
+                </div>
                 <div className="mb-6">
                   <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#2e2b27" }}>29 000 ₽</span>
                 </div>
@@ -321,19 +335,25 @@ export default function Index() {
             </AnimatedSection>
           </div>
 
-          <AnimatedSection className="delay-200">
+          {/* Бронирование */}
+          <AnimatedSection className="delay-150">
             <div className="mt-10 max-w-3xl mx-auto">
-              <div className="rounded-2xl px-8 py-5 flex flex-col md:flex-row md:items-center gap-4" style={{ backgroundColor: "#ede8e2" }}>
-                <div className="flex items-start gap-3">
-                  <Icon name="Info" size={18} style={{ color: "#6b7343", marginTop: "2px" }} />
-                  <div>
-                    <p className="font-golos text-sm font-medium" style={{ color: "#2e2b27" }}>
-                      Предоплата (бронирование) — 3 000 ₽ <span style={{ color: "#6b6058", fontWeight: 400 }}>(невозвратные)</span>
-                    </p>
-                    <p className="font-golos text-xs mt-1" style={{ color: "#6b6058" }}>
-                      Оплата курса за неделю: полная / половина / четвёртая часть
-                    </p>
+              <div className="rounded-3xl p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6" style={{ backgroundColor: "#2e2b27" }}>
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <Icon name="MapPin" size={16} style={{ color: "#d5cfc7" }} />
+                    <span className="font-golos text-xs tracking-widest uppercase" style={{ color: "#d5cfc7", opacity: 0.7 }}>Бронирование места</span>
                   </div>
+                  <h4 className="font-cormorant text-2xl font-medium mb-1" style={{ color: "#fefefe" }}>Забронировать место</h4>
+                  <p className="font-golos text-sm" style={{ color: "#b8b0a6" }}>
+                    Сумма бронирования не возвращается и засчитывается в стоимость курса
+                  </p>
+                </div>
+                <div className="flex flex-col items-start md:items-end gap-3 flex-shrink-0">
+                  <span className="font-cormorant font-light" style={{ fontSize: "2.4rem", color: "#fefefe" }}>3 000 ₽</span>
+                  <button className="px-8 py-3 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap" style={{ backgroundColor: "#6b7343", color: "#fefefe" }}>
+                    Забронировать
+                  </button>
                 </div>
               </div>
             </div>
