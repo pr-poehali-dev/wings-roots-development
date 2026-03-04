@@ -373,13 +373,20 @@ export default function Index() {
 
           <AnimatedSection>
             <div className="rounded-3xl overflow-hidden md:grid md:grid-cols-2" style={{ backgroundColor: "#f5f1ec" }}>
-              <div className="flex items-end justify-center" style={{ backgroundColor: "#ede8e2" }}>
+              <div className="relative flex items-end justify-center overflow-hidden" style={{ backgroundColor: "#f5f1ec", minHeight: "480px" }}>
                 <img
                   src="https://cdn.poehali.dev/projects/3fb389fd-635e-4af7-8ba6-692e017c1dda/bucket/bd44cf9b-f836-4dcd-95ab-877d115e8ab9.jpg"
                   alt="Пекарская Светлана"
-                  className="w-full object-contain object-bottom"
-                  style={{ maxHeight: "560px", display: "block" }}
+                  className="w-full object-contain object-bottom relative z-10"
+                  style={{ maxHeight: "540px", display: "block" }}
                 />
+                {/* Fade sides */}
+                <div className="absolute inset-y-0 left-0 w-12 z-20" style={{ background: "linear-gradient(to right, #f5f1ec, transparent)" }} />
+                <div className="absolute inset-y-0 right-0 w-12 z-20" style={{ background: "linear-gradient(to left, #f5f1ec, transparent)" }} />
+                {/* Fade bottom */}
+                <div className="absolute bottom-0 left-0 right-0 h-16 z-20" style={{ background: "linear-gradient(to top, #f5f1ec, transparent)" }} />
+                {/* Fade top */}
+                <div className="absolute top-0 left-0 right-0 h-24 z-20" style={{ background: "linear-gradient(to bottom, #f5f1ec, transparent)" }} />
               </div>
               <div className="p-10 md:p-14 flex flex-col justify-center">
                 <h3 className="font-cormorant text-3xl font-medium mb-1" style={{ color: "#2e2b27" }}>Пекарская Светлана</h3>
