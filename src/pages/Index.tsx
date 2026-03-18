@@ -508,7 +508,7 @@ export default function Index() {
                 <Icon name="MessageCircle" size={18} />
                 Написать в Telegram
               </a>
-              <a href="mailto:" className="flex items-center justify-center gap-3 px-8 py-4 rounded-full font-golos font-medium text-sm border-2 transition-all duration-300 hover:scale-105" style={{ borderColor: "#d5cfc7", color: "#fefefe", backgroundColor: "transparent" }}>
+              <a href="mailto:info@rosmededucation.ru" className="flex items-center justify-center gap-3 px-8 py-4 rounded-full font-golos font-medium text-sm border-2 transition-all duration-300 hover:scale-105" style={{ borderColor: "#d5cfc7", color: "#fefefe", backgroundColor: "transparent" }}>
                 <Icon name="Mail" size={18} />
                 Написать на email
               </a>
