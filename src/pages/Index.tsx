@@ -95,7 +95,8 @@ export default function Index() {
             <img
               src="https://cdn.poehali.dev/projects/3fb389fd-635e-4af7-8ba6-692e017c1dda/bucket/58748947-c78d-45e0-8e05-12b68512d9e0.jpg"
               alt="МедОбраз"
-              className="h-10 w-auto object-contain"
+              className="h-40 w-auto object-contain"
+              style={{ mixBlendMode: "multiply" }}
             />
           </a>
           <div className="hidden md:flex items-center gap-8">
