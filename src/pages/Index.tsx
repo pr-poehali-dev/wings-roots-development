@@ -402,6 +402,46 @@ export default function Index() {
             </div>
           </AnimatedSection>
 
+          {/* Вводный модуль */}
+          <AnimatedSection>
+            <div className="mb-8 max-w-3xl mx-auto rounded-3xl p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6 border-2" style={{ backgroundColor: "#fff8f0", borderColor: "#c4763a" }}>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="font-golos text-xs tracking-widest uppercase px-3 py-1 rounded-full font-medium" style={{ backgroundColor: "#c4763a", color: "#fefefe" }}>
+                    Предварительный этап
+                  </span>
+                </div>
+                <h3 className="font-cormorant text-2xl font-medium mb-2" style={{ color: "#2e2b27" }}>Вводный модуль в записи</h3>
+                <p className="font-golos text-sm leading-relaxed mb-4" style={{ color: "#4a4540" }}>
+                  Обязательный этап перед офлайн-курсом. Можно приобрести и отдельно.
+                </p>
+                <ul className="space-y-1.5">
+                  {[
+                    "Понятие опорности и её диагностика в работе с клиентом",
+                    "Этапы формирования опорности",
+                    "Оценка опорности через походку",
+                    "Упражнение «Выравнивание»",
+                  ].map((topic, j) => (
+                    <li key={j} className="flex items-start gap-2 font-golos text-sm" style={{ color: "#4a4540" }}>
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: "#c4763a" }} />
+                      {topic}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex flex-col items-start md:items-end gap-4 flex-shrink-0">
+                <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#c4763a" }}>2 200 ₽</span>
+                <a
+                  href="mailto:info@rosmededucation.ru?subject=Запись на вводный модуль"
+                  className="px-8 py-3 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 whitespace-nowrap"
+                  style={{ backgroundColor: "#c4763a", color: "#fefefe" }}
+                >
+                  Купить модуль
+                </a>
+              </div>
+            </div>
+          </AnimatedSection>
+
           <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             <AnimatedSection>
               <div className="relative rounded-3xl p-8 flex flex-col h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2" style={{ backgroundColor: "#fefefe", borderColor: "#d5cfc7" }}>
