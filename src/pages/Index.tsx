@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import Icon from "@/components/ui/icon";
 
 const heroImage = "https://cdn.poehali.dev/projects/3fb389fd-635e-4af7-8ba6-692e017c1dda/files/e0468f9c-ca99-4815-b494-8d5f9325336c.jpg";
@@ -105,7 +106,7 @@ function TariffModal({ scriptId, widgetId, buttonLabel, buttonStyle }: { scriptI
       >
         {buttonLabel}
       </button>
-      {open && (
+      {open && createPortal(
         <div
           className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
           style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
@@ -123,7 +124,8 @@ function TariffModal({ scriptId, widgetId, buttonLabel, buttonStyle }: { scriptI
             </button>
             <PayScriptWidget scriptId={scriptId} widgetId={widgetId} />
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
