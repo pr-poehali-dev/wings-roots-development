@@ -431,7 +431,7 @@ export default function Index() {
                     </span>
                   </div>
                   <h3 className="font-cormorant text-2xl font-medium mb-4" style={{ color: "#2e2b27" }}>{mod.title}</h3>
-                  <ul className="space-y-2 flex-1">
+                  <ul className="space-y-2">
                     {mod.topics.map((topic, j) => (
                       <li key={j} className="flex items-start gap-2 font-golos text-sm" style={{ color: "#4a4540" }}>
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: "#6b7343" }} />
@@ -439,17 +439,6 @@ export default function Index() {
                       </li>
                     ))}
                   </ul>
-                  {i === 0 && (
-                    <div className="mt-5">
-                      <TariffModal
-                        scriptId="42e1c7fc2b1bc70a5c14aceabaa94a7922dc825d"
-                        widgetId="1578342"
-                        buttonLabel="Купить вводный модуль"
-                        buttonStyle={{ backgroundColor: "#c4763a", color: "#fefefe" }}
-                        buttonClassName="px-6 py-2.5 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 whitespace-nowrap"
-                      />
-                    </div>
-                  )}
                 </div>
               </AnimatedSection>
             ))}
