@@ -82,7 +82,10 @@ function PayScriptWidget() {
     const script = document.createElement("script");
     script.id = "e5fed894f53a5d079e6df07b943627992e673de3";
     script.src = "https://course.rosmededucation.ru/pl/lite/widget/script?id=1578337";
-    script.async = true;
+    script.onload = () => {
+      const fn = (window as Record<string, unknown>)["startWidgete5fed894f53a5d079e6df07b943627992e673de3"];
+      if (typeof fn === "function") (fn as () => void)();
+    };
     container.appendChild(script);
     return () => { container.innerHTML = ""; };
   }, []);
