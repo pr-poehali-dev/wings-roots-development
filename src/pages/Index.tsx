@@ -681,9 +681,22 @@ export default function Index() {
 
       {/* FOOTER */}
       <footer className="py-8 px-6 text-center" style={{ backgroundColor: "#2e2b27" }}>
-        <p className="font-golos text-xs" style={{ color: "#6b6058" }}>
-          © 2025 Крылья и Корни — курс психологической зрелости
+        <p className="font-golos text-xs mb-4" style={{ color: "#6b6058" }}>
+          © 2026 Крылья и Корни — курс психологической зрелости
         </p>
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+          {[
+            { label: "Согласие на обработку персональных данных", href: "https://rosmededucation.ru/soglasie_pd" },
+            { label: "Политика обработки персональных данных", href: "https://rosmededucation.ru/politika_conf" },
+            { label: "Согласие на получение рассылки и рекламных материалов", href: "https://rosmededucation.ru/soglasie_pd" },
+            { label: "Договор оферта", href: "https://rosmededucation.getcourse.ru/pl/fileservice/user/file/download/h/584107188c08ac696ed8d8970cb9571c.pdf" },
+            { label: "Согласие на обработку файлов Cookies", href: "https://rosmededucation.ru/cookies-page" },
+          ].map((link, i) => (
+            <a key={i} href={link.href} target="_blank" rel="noopener noreferrer" className="font-golos text-xs underline underline-offset-2 transition-colors hover:opacity-80" style={{ color: "#6b6058" }}>
+              {link.label}
+            </a>
+          ))}
+        </div>
       </footer>
 
 
