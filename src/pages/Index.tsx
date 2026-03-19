@@ -94,13 +94,13 @@ function PayScriptWidget({ scriptId, widgetId }: { scriptId: string; widgetId: s
   return <div ref={ref} />;
 }
 
-function TariffModal({ scriptId, widgetId, buttonLabel, buttonStyle }: { scriptId: string; widgetId: string; buttonLabel: string; buttonStyle: React.CSSProperties }) {
+function TariffModal({ scriptId, widgetId, buttonLabel, buttonStyle, buttonClassName }: { scriptId: string; widgetId: string; buttonLabel: string; buttonStyle: React.CSSProperties; buttonClassName?: string }) {
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <button
-        className="w-full py-3.5 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg"
+        className={buttonClassName ?? "w-full py-3.5 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg"}
         style={buttonStyle}
         onClick={() => setOpen(true)}
       >
@@ -423,7 +423,7 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-6">
             {programModules.map((mod, i) => (
               <AnimatedSection key={i}>
-                <div className="rounded-3xl p-8 h-full transition-all duration-300 hover:shadow-md hover:-translate-y-1" style={{ backgroundColor: "#f5f1ec" }}>
+                <div className="rounded-3xl p-8 h-full flex flex-col transition-all duration-300 hover:shadow-md hover:-translate-y-1" style={{ backgroundColor: "#f5f1ec" }}>
                   <div className="flex items-start justify-between mb-5">
                     <span className="font-cormorant text-5xl font-light leading-none" style={{ color: "#d5cfc7" }}>{mod.date}</span>
                     <span className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center font-golos text-sm font-medium" style={{ backgroundColor: "#6b7343", color: "#fefefe" }}>
@@ -431,7 +431,7 @@ export default function Index() {
                     </span>
                   </div>
                   <h3 className="font-cormorant text-2xl font-medium mb-4" style={{ color: "#2e2b27" }}>{mod.title}</h3>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 flex-1">
                     {mod.topics.map((topic, j) => (
                       <li key={j} className="flex items-start gap-2 font-golos text-sm" style={{ color: "#4a4540" }}>
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: "#6b7343" }} />
@@ -439,6 +439,17 @@ export default function Index() {
                       </li>
                     ))}
                   </ul>
+                  {i === 0 && (
+                    <div className="mt-5">
+                      <TariffModal
+                        scriptId="42e1c7fc2b1bc70a5c14aceabaa94a7922dc825d"
+                        widgetId="1578342"
+                        buttonLabel="Купить вводный модуль"
+                        buttonStyle={{ backgroundColor: "#c4763a", color: "#fefefe" }}
+                        buttonClassName="px-6 py-2.5 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 whitespace-nowrap"
+                      />
+                    </div>
+                  )}
                 </div>
               </AnimatedSection>
             ))}
@@ -484,13 +495,13 @@ export default function Index() {
               </div>
               <div className="flex flex-col items-start md:items-end gap-4 flex-shrink-0">
                 <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#c4763a" }}>2 500 ₽</span>
-                <a
-                  href="mailto:info@rosmededucation.ru?subject=Запись на вводный модуль"
-                  className="px-8 py-3 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 whitespace-nowrap"
-                  style={{ backgroundColor: "#c4763a", color: "#fefefe" }}
-                >
-                  Купить модуль
-                </a>
+                <TariffModal
+                  scriptId="42e1c7fc2b1bc70a5c14aceabaa94a7922dc825d"
+                  widgetId="1578342"
+                  buttonLabel="Купить модуль"
+                  buttonStyle={{ backgroundColor: "#c4763a", color: "#fefefe" }}
+                  buttonClassName="px-8 py-3 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 whitespace-nowrap"
+                />
               </div>
             </div>
           </AnimatedSection>
@@ -576,9 +587,13 @@ export default function Index() {
                 </div>
                 <div className="flex flex-col items-start md:items-end gap-3 flex-shrink-0">
                   <span className="font-cormorant font-light" style={{ fontSize: "2.4rem", color: "#fefefe" }}>3 000 ₽</span>
-                  <button className="px-8 py-3 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap" style={{ backgroundColor: "#6b7343", color: "#fefefe" }}>
-                    Забронировать
-                  </button>
+                  <TariffModal
+                    scriptId="681f3c4afb66595b63bad6859050d6499fc656fe"
+                    widgetId="1578335"
+                    buttonLabel="Забронировать"
+                    buttonStyle={{ backgroundColor: "#6b7343", color: "#fefefe" }}
+                    buttonClassName="px-8 py-3 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap"
+                  />
                 </div>
               </div>
             </div>
