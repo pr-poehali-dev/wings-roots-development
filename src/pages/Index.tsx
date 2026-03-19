@@ -321,14 +321,12 @@ export default function Index() {
             <div className="rounded-3xl p-8 mb-8 border-2" style={{ backgroundColor: "#fff8f0", borderColor: "#c4763a" }}>
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
                 <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="font-golos text-xs tracking-widest uppercase px-3 py-1 rounded-full font-medium" style={{ backgroundColor: "#c4763a", color: "#fefefe" }}>
-                      До начала курса
-                    </span>
-                  </div>
-                  <h3 className="font-cormorant text-2xl font-medium mb-3" style={{ color: "#2e2b27" }}>Предварительный этап обучения</h3>
-                  <p className="font-golos text-sm leading-relaxed mb-5" style={{ color: "#4a4540" }}>
-                    Для участия в офлайн-курсе необходимо заранее пройти вводный модуль в записи. Это обязательный этап подготовки, который оплачивается отдельно.
+                  <h3 className="font-cormorant text-2xl font-medium mb-2" style={{ color: "#2e2b27" }}>Вводный модуль «Опорность: основы подхода»</h3>
+                  <p className="font-golos text-sm leading-relaxed mb-1 mt-2" style={{ color: "#4a4540" }}>
+                    Доступен для отдельного приобретения.
+                  </p>
+                  <p className="font-golos text-sm leading-relaxed mb-5" style={{ color: "#c4763a" }}>
+                    Модуль входит во все тарифы.
                   </p>
                   <p className="font-golos text-sm font-medium mb-3" style={{ color: "#2e2b27" }}>Модуль включает 4 урока:</p>
                   <ul className="space-y-2 mb-5">
@@ -344,14 +342,12 @@ export default function Index() {
                       </li>
                     ))}
                   </ul>
-                  <p className="font-golos text-xs" style={{ color: "#6b6058" }}>
-                    Модуль можно приобрести и отдельно, без участия в очном курсе.
-                  </p>
+
                 </div>
                 <div className="flex flex-col items-center md:items-end justify-center gap-4 md:min-w-[180px]">
                   <div className="text-center md:text-right">
                     <p className="font-golos text-xs mb-1" style={{ color: "#6b6058" }}>Стоимость</p>
-                    <p className="font-cormorant text-4xl font-medium" style={{ color: "#c4763a" }}>2 200 ₽</p>
+                    <p className="font-cormorant text-4xl font-medium" style={{ color: "#c4763a" }}>2 500 ₽</p>
                   </div>
                   <a
                     href="mailto:info@rosmededucation.ru?subject=Запись на вводный модуль"
