@@ -72,6 +72,24 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
   );
 }
 
+function PayScriptWidget() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = ref.current;
+    if (!container) return;
+    container.innerHTML = "";
+    const script = document.createElement("script");
+    script.id = "e5fed894f53a5d079e6df07b943627992e673de3";
+    script.src = "https://course.rosmededucation.ru/pl/lite/widget/script?id=1578337";
+    script.async = true;
+    container.appendChild(script);
+    return () => { container.innerHTML = ""; };
+  }, []);
+
+  return <div ref={ref} />;
+}
+
 export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -623,7 +641,7 @@ export default function Index() {
             </button>
             <h3 className="font-cormorant text-2xl font-medium mb-2" style={{ color: "#2e2b27" }}>Без малой группы</h3>
             <p className="font-golos text-sm mb-6" style={{ color: "#6b6058" }}>Оформление заказа</p>
-            <script id="e5fed894f53a5d079e6df07b943627992e673de3" src="https://course.rosmededucation.ru/pl/lite/widget/script?id=1578337"></script>
+            <PayScriptWidget />
           </div>
         </div>
       )}
