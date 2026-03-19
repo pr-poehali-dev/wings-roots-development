@@ -570,15 +570,22 @@ export default function Index() {
                     <span className="font-golos text-xs tracking-widest uppercase" style={{ color: "#d5cfc7", opacity: 0.7 }}>Бронирование места</span>
                   </div>
                   <h4 className="font-cormorant text-2xl font-medium mb-1" style={{ color: "#fefefe" }}>Забронировать место</h4>
-                  <p className="font-golos text-sm" style={{ color: "#b8b0a6" }}>
+                  <p className="font-golos text-sm mb-2" style={{ color: "#b8b0a6" }}>
                     Сумма бронирования не возвращается и засчитывается в стоимость курса
                   </p>
+                  <div className="flex items-center gap-2">
+                    <Icon name="Check" size={14} style={{ color: "#d5cfc7" }} />
+                    <span className="font-golos text-xs" style={{ color: "#d5cfc7" }}>В бронирование входит вводный модуль «Опорность: основы подхода»</span>
+                  </div>
                 </div>
                 <div className="flex flex-col items-start md:items-end gap-3 flex-shrink-0">
                   <span className="font-cormorant font-light" style={{ fontSize: "2.4rem", color: "#fefefe" }}>3 000 ₽</span>
-                  <button className="px-8 py-3 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap" style={{ backgroundColor: "#6b7343", color: "#fefefe" }}>
-                    Забронировать
-                  </button>
+                  <TariffModal
+                    scriptId="42e1c7fc2b1bc70a5c14aceabaa94a7922dc825d"
+                    widgetId="1578342"
+                    buttonLabel="Забронировать"
+                    buttonStyle={{ backgroundColor: "#6b7343", color: "#fefefe" }}
+                  />
                 </div>
               </div>
             </div>
