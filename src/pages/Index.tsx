@@ -72,7 +72,7 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
   );
 }
 
-function PayScriptWidget({ scriptId = "e5fed894f53a5d079e6df07b943627992e673de3", widgetId = "1578337" }: { scriptId?: string; widgetId?: string }) {
+function PayScriptWidget({ scriptId, widgetId }: { scriptId: string; widgetId: string }) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -91,6 +91,42 @@ function PayScriptWidget({ scriptId = "e5fed894f53a5d079e6df07b943627992e673de3"
   }, [scriptId, widgetId]);
 
   return <div ref={ref} />;
+}
+
+function TariffModal({ scriptId, widgetId, buttonLabel, buttonStyle }: { scriptId: string; widgetId: string; buttonLabel: string; buttonStyle: React.CSSProperties }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <button
+        className="w-full py-3.5 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg"
+        style={buttonStyle}
+        onClick={() => setOpen(true)}
+      >
+        {buttonLabel}
+      </button>
+      {open && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+          onClick={() => setOpen(false)}
+        >
+          <div
+            className="relative bg-white rounded-3xl p-6 w-full max-w-lg max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition-colors"
+              onClick={() => setOpen(false)}
+            >
+              <Icon name="X" size={20} />
+            </button>
+            <PayScriptWidget scriptId={scriptId} widgetId={widgetId} />
+          </div>
+        </div>
+      )}
+    </>
+  );
 }
 
 export default function Index() {
@@ -479,7 +515,12 @@ export default function Index() {
                 <div className="mb-6">
                   <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#2e2b27" }}>31 000 ₽</span>
                 </div>
-                <PayScriptWidget />
+                <TariffModal
+                  scriptId="e5fed894f53a5d079e6df07b943627992e673de3"
+                  widgetId="1578337"
+                  buttonLabel="Выбрать тариф"
+                  buttonStyle={{ backgroundColor: "#5c6c53", color: "#fefefe" }}
+                />
               </div>
             </AnimatedSection>
 
@@ -507,7 +548,12 @@ export default function Index() {
                 <div className="mb-6">
                   <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#fefefe" }}>41 000 ₽</span>
                 </div>
-                <PayScriptWidget scriptId="28c21158fb1927a4ef1437940edcdce094a9f0bc" widgetId="1578340" />
+                <TariffModal
+                  scriptId="28c21158fb1927a4ef1437940edcdce094a9f0bc"
+                  widgetId="1578340"
+                  buttonLabel="Выбрать тариф"
+                  buttonStyle={{ backgroundColor: "#fefefe", color: "#5c6c53" }}
+                />
               </div>
             </AnimatedSection>
           </div>
