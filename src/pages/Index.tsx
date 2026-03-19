@@ -406,14 +406,12 @@ export default function Index() {
           <AnimatedSection>
             <div className="mb-8 max-w-3xl mx-auto rounded-3xl p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6 border-2" style={{ backgroundColor: "#fff8f0", borderColor: "#c4763a" }}>
               <div className="flex-1">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="font-golos text-xs tracking-widest uppercase px-3 py-1 rounded-full font-medium" style={{ backgroundColor: "#c4763a", color: "#fefefe" }}>
-                    Предварительный этап
-                  </span>
-                </div>
-                <h3 className="font-cormorant text-2xl font-medium mb-2" style={{ color: "#2e2b27" }}>Вводный модуль в записи</h3>
-                <p className="font-golos text-sm leading-relaxed mb-4" style={{ color: "#4a4540" }}>
-                  Обязательный этап перед офлайн-курсом. Можно приобрести и отдельно.
+                <h3 className="font-cormorant text-2xl font-medium mb-1" style={{ color: "#2e2b27" }}>Вводный модуль «Опорность: основы подхода»</h3>
+                <p className="font-golos text-sm leading-relaxed mb-1 mt-2" style={{ color: "#4a4540" }}>
+                  Доступен для отдельного приобретения.
+                </p>
+                <p className="font-golos text-sm leading-relaxed mb-4" style={{ color: "#c4763a" }}>
+                  Модуль входит во все тарифы.
                 </p>
                 <ul className="space-y-1.5">
                   {[
@@ -430,7 +428,7 @@ export default function Index() {
                 </ul>
               </div>
               <div className="flex flex-col items-start md:items-end gap-4 flex-shrink-0">
-                <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#c4763a" }}>2 200 ₽</span>
+                <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#c4763a" }}>2 500 ₽</span>
                 <a
                   href="mailto:info@rosmededucation.ru?subject=Запись на вводный модуль"
                   className="px-8 py-3 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 whitespace-nowrap"
