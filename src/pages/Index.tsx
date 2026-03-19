@@ -72,7 +72,7 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
   );
 }
 
-function PayScriptWidget() {
+function PayScriptWidget({ scriptId = "e5fed894f53a5d079e6df07b943627992e673de3", widgetId = "1578337" }: { scriptId?: string; widgetId?: string }) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -80,15 +80,15 @@ function PayScriptWidget() {
     if (!container) return;
     container.innerHTML = "";
     const script = document.createElement("script");
-    script.id = "e5fed894f53a5d079e6df07b943627992e673de3";
-    script.src = "https://course.rosmededucation.ru/pl/lite/widget/script?id=1578337";
+    script.id = scriptId;
+    script.src = `https://course.rosmededucation.ru/pl/lite/widget/script?id=${widgetId}`;
     script.onload = () => {
-      const fn = (window as Record<string, unknown>)["startWidgete5fed894f53a5d079e6df07b943627992e673de3"];
+      const fn = (window as Record<string, unknown>)[`startWidget${scriptId}`];
       if (typeof fn === "function") (fn as () => void)();
     };
     container.appendChild(script);
     return () => { container.innerHTML = ""; };
-  }, []);
+  }, [scriptId, widgetId]);
 
   return <div ref={ref} />;
 }
@@ -493,7 +493,7 @@ export default function Index() {
                   <p className="font-golos text-sm" style={{ color: "#d5cfc7", opacity: 0.85 }}>Максимальный результат</p>
                 </div>
                 <ul className="space-y-3 mb-6 flex-1">
-                  {["32 часа курса с практиками", "16 часов малых групп", "Отработка упражнений", "Полный доступ к материалам"].map((item, i) => (
+                  {["Вводный модуль «Опорность: основы подхода»", "32 часа курса с практиками", "16 часов малых групп", "Отработка упражнений", "Полный доступ к материалам"].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 font-golos text-sm" style={{ color: "#fefefe" }}>
                       <Icon name="Check" size={16} style={{ color: "#d5cfc7" }} />
                       {item}
@@ -505,11 +505,9 @@ export default function Index() {
                   <span className="font-golos text-xs" style={{ color: "#d5cfc7" }}>Доступна оплата частями</span>
                 </div>
                 <div className="mb-6">
-                  <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#fefefe" }}>39 000 ₽</span>
+                  <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#fefefe" }}>41 000 ₽</span>
                 </div>
-                <button className="w-full py-3.5 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ backgroundColor: "#fefefe", color: "#5c6c53" }}>
-                  Выбрать тариф
-                </button>
+                <PayScriptWidget scriptId="28c21158fb1927a4ef1437940edcdce094a9f0bc" widgetId="1578340" />
               </div>
             </AnimatedSection>
           </div>
