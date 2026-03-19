@@ -660,13 +660,9 @@ export default function Index() {
               Напишите нам — ответим на все вопросы о курсе, поможем выбрать подходящий тариф и расскажем подробнее о программе.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a href="https://t.me/" className="flex items-center justify-center gap-3 px-8 py-4 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ backgroundColor: "#fefefe", color: "#5c6c53" }}>
-                <Icon name="MessageCircle" size={18} />
-                Написать в Telegram
-              </a>
-              <a href="mailto:info@rosmededucation.ru" className="flex items-center justify-center gap-3 px-8 py-4 rounded-full font-golos font-medium text-sm border-2 transition-all duration-300 hover:scale-105" style={{ borderColor: "#d5cfc7", color: "#fefefe", backgroundColor: "transparent" }}>
+              <a href="mailto:info@rosmededucation.ru" className="flex items-center justify-center gap-3 px-8 py-4 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ backgroundColor: "#fefefe", color: "#5c6c53" }}>
                 <Icon name="Mail" size={18} />
-                Написать на email
+                info@rosmededucation.ru
               </a>
             </div>
             <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full" style={{ backgroundColor: "rgba(213,207,199,0.15)" }}>
