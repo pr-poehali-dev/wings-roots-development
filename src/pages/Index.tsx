@@ -570,9 +570,13 @@ export default function Index() {
                     <span className="font-golos text-xs tracking-widest uppercase" style={{ color: "#d5cfc7", opacity: 0.7 }}>Бронирование места</span>
                   </div>
                   <h4 className="font-cormorant text-2xl font-medium mb-1" style={{ color: "#fefefe" }}>Забронировать место</h4>
-                  <p className="font-golos text-sm" style={{ color: "#b8b0a6" }}>
+                  <p className="font-golos text-sm mb-3" style={{ color: "#b8b0a6" }}>
                     Сумма бронирования не возвращается и засчитывается в стоимость курса
                   </p>
+                  <div className="flex items-center gap-2">
+                    <Icon name="Check" size={14} style={{ color: "#d5cfc7" }} />
+                    <span className="font-golos text-xs" style={{ color: "#d5cfc7" }}>В бронирование входит доступ к вводному модулю «Опорность: основы подхода»</span>
+                  </div>
                 </div>
                 <div className="flex flex-col items-start md:items-end gap-3 flex-shrink-0">
                   <span className="font-cormorant font-light" style={{ fontSize: "2.4rem", color: "#fefefe" }}>3 000 ₽</span>
