@@ -408,13 +408,13 @@ export default function Index() {
                     <p className="font-golos text-xs mb-1" style={{ color: "#6b6058" }}>Стоимость</p>
                     <p className="font-cormorant text-4xl font-medium" style={{ color: "#c4763a" }}>2 500 ₽</p>
                   </div>
-                  <a
-                    href="mailto:info@rosmededucation.ru?subject=Запись на вводный модуль"
-                    className="px-6 py-3 rounded-full font-golos text-sm font-medium transition-all duration-300 hover:scale-105 text-center"
-                    style={{ backgroundColor: "#c4763a", color: "#fefefe" }}
-                  >
-                    Купить модуль
-                  </a>
+                  <TariffModal
+                    scriptId="42e1c7fc2b1bc70a5c14aceabaa94a7922dc825d"
+                    widgetId="1578342"
+                    buttonLabel="Купить модуль"
+                    buttonStyle={{ backgroundColor: "#c4763a", color: "#fefefe" }}
+                    buttonClassName="px-6 py-3 rounded-full font-golos text-sm font-medium transition-all duration-300 hover:scale-105 text-center"
+                  />
                 </div>
               </div>
             </div>
