@@ -75,6 +75,7 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
 export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showPayModal, setShowPayModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -444,7 +445,7 @@ export default function Index() {
                   <p className="font-golos text-sm" style={{ color: "#6b6058" }}>Базовая программа</p>
                 </div>
                 <ul className="space-y-3 mb-6 flex-1">
-                  {["32 часа курса с практиками", "Все лекционные материалы", "Доступ к записям занятий"].map((item, i) => (
+                  {["Вводный модуль «Опорность: основы подхода»", "32 часа курса с практиками", "Все лекционные материалы", "Доступ к записям занятий"].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 font-golos text-sm" style={{ color: "#4a4540" }}>
                       <Icon name="Check" size={16} style={{ color: "#6b7343" }} />
                       {item}
@@ -456,9 +457,9 @@ export default function Index() {
                   <span className="font-golos text-xs" style={{ color: "#6b6058" }}>Доступна оплата частями</span>
                 </div>
                 <div className="mb-6">
-                  <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#2e2b27" }}>29 000 ₽</span>
+                  <span className="font-cormorant font-light" style={{ fontSize: "2.8rem", color: "#2e2b27" }}>31 000 ₽</span>
                 </div>
-                <button className="w-full py-3.5 rounded-full font-golos font-medium text-sm border-2 transition-all duration-300 hover:scale-105" style={{ borderColor: "#6b7343", color: "#6b7343", backgroundColor: "transparent" }}>
+                <button onClick={() => setShowPayModal(true)} className="w-full py-3.5 rounded-full font-golos font-medium text-sm border-2 transition-all duration-300 hover:scale-105" style={{ borderColor: "#6b7343", color: "#6b7343", backgroundColor: "transparent" }}>
                   Выбрать тариф
                 </button>
               </div>
@@ -612,6 +613,20 @@ export default function Index() {
           © 2025 Крылья и Корни — курс психологической зрелости
         </p>
       </footer>
+
+      {/* Модальное окно оплаты */}
+      {showPayModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ backgroundColor: "rgba(0,0,0,0.6)" }} onClick={() => setShowPayModal(false)}>
+          <div className="relative rounded-3xl p-8 w-full max-w-lg" style={{ backgroundColor: "#fefefe" }} onClick={(e) => e.stopPropagation()}>
+            <button onClick={() => setShowPayModal(false)} className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full transition-colors hover:bg-gray-100">
+              <Icon name="X" size={18} style={{ color: "#6b6058" }} />
+            </button>
+            <h3 className="font-cormorant text-2xl font-medium mb-2" style={{ color: "#2e2b27" }}>Без малой группы</h3>
+            <p className="font-golos text-sm mb-6" style={{ color: "#6b6058" }}>Оформление заказа</p>
+            <script id="e5fed894f53a5d079e6df07b943627992e673de3" src="https://course.rosmededucation.ru/pl/lite/widget/script?id=1578337"></script>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
