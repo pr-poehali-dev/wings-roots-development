@@ -150,13 +150,16 @@ export default function Index() {
         style={{ backgroundColor: scrolled ? "rgba(254,254,254,0.95)" : "transparent", backdropFilter: scrolled ? "blur(8px)" : "none" }}
       >
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-          <a href="#">
+          <a href="#" className="flex flex-col items-center">
             <img
               src="https://cdn.poehali.dev/projects/3fb389fd-635e-4af7-8ba6-692e017c1dda/bucket/58748947-c78d-45e0-8e05-12b68512d9e0.jpg"
               alt="МедОбраз"
               className="h-40 w-auto object-contain"
               style={{ mixBlendMode: "multiply" }}
             />
+            <p className="font-golos text-center leading-snug" style={{ fontSize: "0.65rem", color: "#4a4540", maxWidth: "180px" }}>
+              АНО ДПО «НОЦ СМТ»<br />при поддержке Союза охраны психического здоровья
+            </p>
           </a>
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
