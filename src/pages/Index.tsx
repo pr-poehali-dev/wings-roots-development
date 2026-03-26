@@ -659,10 +659,20 @@ export default function Index() {
             <p className="font-golos text-base leading-relaxed mb-12" style={{ color: "#d5cfc7", opacity: 0.9 }}>
               Напишите нам — ответим на все вопросы о курсе, поможем выбрать подходящий тариф и расскажем подробнее о программе.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="mailto:info@rosmededucation.ru" className="flex items-center justify-center gap-3 px-8 py-4 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ backgroundColor: "#fefefe", color: "#5c6c53" }}>
                 <Icon name="Mail" size={18} />
                 info@rosmededucation.ru
+              </a>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <a href="https://t.me/id491056270" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 px-6 py-3 rounded-full font-golos text-sm transition-all duration-300 hover:scale-105" style={{ backgroundColor: "rgba(213,207,199,0.15)", color: "#d5cfc7" }}>
+                <Icon name="MessageCircle" size={16} />
+                <span><span style={{ opacity: 0.7 }}>Администратор</span> <strong style={{ color: "#fefefe" }}>Анна</strong></span>
+              </a>
+              <a href="https://vk.ru/pekarskayasv" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 px-6 py-3 rounded-full font-golos text-sm transition-all duration-300 hover:scale-105" style={{ backgroundColor: "rgba(213,207,199,0.15)", color: "#d5cfc7" }}>
+                <Icon name="Users" size={16} />
+                <span><span style={{ opacity: 0.7 }}>Тренер группы</span> <strong style={{ color: "#fefefe" }}>Светлана</strong></span>
               </a>
             </div>
             <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full" style={{ backgroundColor: "rgba(213,207,199,0.15)" }}>
