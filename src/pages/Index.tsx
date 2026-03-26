@@ -280,7 +280,7 @@ export default function Index() {
               <div className="absolute top-[-40px] right-[-40px] w-48 h-48 blob-3" style={{ backgroundColor: "#6b7343", opacity: 0.3 }} />
               <div className="relative z-10 max-w-3xl">
                 <p className="font-golos text-sm tracking-widest uppercase mb-4" style={{ color: "#d5cfc7", opacity: 0.8 }}>Цель программы</p>
-                <p className="font-cormorant font-light leading-relaxed" style={{ fontSize: "clamp(1.4rem, 2.5vw, 2rem)", color: "#fefefe" }}>
+                <p className="font-cormorant font-light leading-relaxed" style={{ fontSize: "clamp(1.4rem, 2.5vw, 2rem)", color: "#fefefe", textAlign: "justify", display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
                   Формирование профессиональных компетенций для ведения эффективной работы в психокоррекции и консультировании — поддержка и развитие психологической зрелости клиента.
                 </p>
               </div>
